@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://prodevzone.com/titrum/js/titrum.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var settings = {
+            id: 'player-204',
+            player: 'jw-player',
+            width: 640,
+            height: 360,
+            videoUrl: 'http://pseudo01.hddn.com/vod/demo.flowplayervod/flowplayer-700.flv',
+            imageUrl: '',
+            autoPlay: false,
+            hideControls: false
+        };
+
+        var slides = [
+            {id: 'block-1990', start_time: 10, end_time: 20},
+            {id: 'block-2011', start_time: 5, end_time: 10}
+        ];
+
+        var titrum = new Titrum(settings, slides);
+    });
+</script>
+</head>
+
+<body>
+        <center><div id="player-204"></div></center>
+        <div id="slides-204">
+            <div id="block-1990" style="display: none">
+                test
+            </div>
+            <div id="block-2011" style="display: none">
+                test3
+            </div>
+        </div>
+</body>
+</html>

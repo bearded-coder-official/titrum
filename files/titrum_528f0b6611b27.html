@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/titrum.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var settings = {
+            id: 'player-559',
+            player: 'vimeo-player',
+            width: 640,
+            height: 360,
+            videoUrl: '7100569',
+            imageUrl: '',
+            autoPlay: true,
+            hideControls: true
+        };
+
+        var slides = [
+            {id: 'block-5540', start_time: 2, end_time: 10}
+        ];
+
+        var titrum = new Titrum(settings, slides);
+    });
+</script>
+</head>
+
+<body>
+        <center><div id="player-559"></div></center>
+        <div id="slides-559">
+            <div id="block-5540" style="display: none">
+                test
+            </div>
+        </div>
+</body>
+</html>

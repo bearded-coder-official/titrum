@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<script type=\"text/javascript\" src=\"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js\"></script>
+<script type=\"text/javascript\" src=\"js/titrum.js\"></script>
+<script type=\"text/javascript\">
+    $(document).ready(function(){
+        var settings = {
+            id: \'player-327\',
+            player: \'youtube-player\',
+            width: 640,
+            height: 360,
+            videoUrl: \'http://www.youtube.com/v/5ESlYyxR4c4\',
+            imageUrl: \'\',
+            autoPlay: true,
+            hideControls: true
+        };
+
+        var slides = [
+            {id: \'block-3220\', start_time: 2, end_time: 10}
+        ];
+
+        var titrum = new Titrum(settings, slides);
+    });
+</script>
+</head>
+
+<body>
+        <center><div id=\"player-327\"></div></center>
+        <div id=\"slides-327\">
+            <div id=\"block-3220\" style=\"display: none\">
+                test
+            </div>
+        </div>
+</body>
+</html>

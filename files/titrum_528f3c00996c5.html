@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/titrum.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var settings = {
+            id: 'player-392',
+            player: 'jw-player',
+            width: 640,
+            height: 360,
+            videoUrl: '',
+            imageUrl: '',
+            autoPlay: true,
+            hideControls: true
+        };
+
+        var slides = [
+            {id: 'block-3870', start_time: 0, end_time: 99999999},
+            {id: 'block-3871', start_time: 0, end_time: 99999999}
+        ];
+
+        var titrum = new Titrum(settings, slides);
+    });
+</script>
+</head>
+
+<body>
+        <center><div id="player-392"></div></center>
+        <div id="slides-392">
+            <div id="block-3870" style="display: none">
+                
+            </div>
+            <div id="block-3871" style="display: none">
+                
+            </div>
+        </div>
+</body>
+</html>
