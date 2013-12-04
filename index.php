@@ -15,6 +15,28 @@
             currentDiv.show();
 
             $(".next").on("click", function(){
+                if ($(this).closest(".step").index() == 2) {
+
+                    var el = $("input[name=video-url]");
+                    if (el.parent().is(":visible") && !el.val().length) {
+                        el.css("border-color", "red");
+
+                        return false;
+                    } else {
+                        el.css("border-color", "#ccc");
+                    }
+
+                    el = $("input[name=video-id]");
+                    if (el.parent().is(":visible") && !el.val().length) {
+                        el.css("border-color", "red");
+
+                        return false;
+                    } else {
+                        el.css("border-color", "#ccc");
+                    }
+
+                }
+
                 currentDiv.hide();
 
                 currentDiv = currentDiv.next(".step");
@@ -186,7 +208,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container" style="max-width: 625px;">
     <div class="row text-center">
         <h1>Titrum</h1>
     </div>
@@ -195,6 +217,10 @@
         <div class="panel-body">
 
             <div class="row step">
+                <div class="col-sm-12 text-center">
+                    <p id="info"></p>
+                </div>
+
                 <div class="col-sm-12 text-center">
                     <h2>Выбор плеера</h2>
                 </div>
@@ -288,6 +314,7 @@
                         <div class="col-sm-12">
                             <div class="col-sm-12 form-group">
                                 <label>Видео (URL):</label>
+                                <p>* обязательное поле</p>
                                 <input type="text" class="form-control" name="video-url" />
                             </div>
 
@@ -298,6 +325,7 @@
 
                             <div class="col-sm-12 form-group" style="display: none">
                                 <label>Видео ID:</label>
+                                <p>* обязательное поле</p>
                                 <input type="text" class="form-control" name="video-id" />
                             </div>
                         </div>
